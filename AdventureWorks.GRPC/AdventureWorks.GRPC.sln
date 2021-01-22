@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.GRPC.Client.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.GRPC.Domain", "AdventureWorks.GRPC.Domain\AdventureWorks.GRPC.Domain.csproj", "{8B4C5935-8925-4468-8CE0-4B5B45B049A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.API", "AdventureWorks.API\AdventureWorks.API.csproj", "{DE19B0D1-FB38-4237-89F0-1A78B13A585B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8B4C5935-8925-4468-8CE0-4B5B45B049A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B4C5935-8925-4468-8CE0-4B5B45B049A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B4C5935-8925-4468-8CE0-4B5B45B049A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE19B0D1-FB38-4237-89F0-1A78B13A585B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE19B0D1-FB38-4237-89F0-1A78B13A585B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE19B0D1-FB38-4237-89F0-1A78B13A585B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE19B0D1-FB38-4237-89F0-1A78B13A585B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
