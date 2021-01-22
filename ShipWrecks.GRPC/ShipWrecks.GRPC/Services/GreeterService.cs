@@ -1,8 +1,9 @@
 using System.Threading.Tasks;
+using AdventureWorks.GRPC;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
 
-namespace AdventureWorks.GRPC.Services
+namespace ShipWrecks.GRPC.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {

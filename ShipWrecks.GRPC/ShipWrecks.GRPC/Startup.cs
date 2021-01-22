@@ -1,11 +1,11 @@
-﻿using AdventureWorks.GRPC.Services;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ShipWrecks.GRPC.Services;
 
-namespace AdventureWorks.GRPC
+namespace ShipWrecks.GRPC
 {
     public class Startup
     {

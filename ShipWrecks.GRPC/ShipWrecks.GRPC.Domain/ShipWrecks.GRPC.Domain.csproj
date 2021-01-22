@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <RootNamespace>AdventureWorks.GRPC.Domain</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

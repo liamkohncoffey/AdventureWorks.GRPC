@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Subscriptions.Infrastructure.Persistence
+﻿namespace ShipWrecks.Infrastructure.Persistence
 {
     public class Class1
     {

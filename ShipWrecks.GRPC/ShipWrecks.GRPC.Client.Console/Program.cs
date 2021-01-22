@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AdventureWorks.GRPC;
 using Grpc.Core;
 using Grpc.Net.Client;
 
-namespace AdventureWorks.GRPC.Client
+namespace ShipWrecks.GRPC.Client.Console
 {
     class Program
     {
@@ -16,30 +17,30 @@ namespace AdventureWorks.GRPC.Client
             using var channel = GrpcChannel.ForAddress("http://localhost:5000");
             var client = new Greeter.GreeterClient(channel);
             
-            Console.WriteLine("Sending unary call...");
+            System.Console.WriteLine("Sending unary call...");
 
             var reply = await client.SayHelloAsync(new HelloRequest
             {
                 Name = "Liam Coffey"
             });
             
-            Console.WriteLine("Unary response:" + reply.Message);
+            System.Console.WriteLine("Unary response:" + reply.Message);
             
-            Console.WriteLine("Sending request for server stream...");
+            System.Console.WriteLine("Sending request for server stream...");
 
             using (var call = client.SayManyHellos(new HelloRequest{Name = "GreeterClient"}))
             {
                 await foreach (var response in call.ResponseStream.ReadAllAsync())
                 {
-                    Console.WriteLine("New element from response stream:" + response.Message);
+                    System.Console.WriteLine("New element from response stream:" + response.Message);
                 }
             }
             
-            Console.WriteLine("Sending client stream...");
+            System.Console.WriteLine("Sending client stream...");
 
             var listOfNames = new List<string> {"John", "James", "Freddy", "David"};
             
-            Console.WriteLine("Names about to be sent:" + string.Join(", ", listOfNames));
+            System.Console.WriteLine("Names about to be sent:" + string.Join(", ", listOfNames));
 
             using (var call = client.SayHelloToLastRequest())
             {
@@ -53,10 +54,10 @@ namespace AdventureWorks.GRPC.Client
 
                 await call.RequestStream.CompleteAsync();
 
-                Console.WriteLine("Response from client stream:" + (await call.ResponseAsync).Message);
+                System.Console.WriteLine("Response from client stream:" + (await call.ResponseAsync).Message);
             }
 
-            Console.WriteLine("Sending bi-directional call...");
+            System.Console.WriteLine("Sending bi-directional call...");
 
             using (var call = client.SayHelloToEveryRequest())
             {
@@ -72,21 +73,21 @@ namespace AdventureWorks.GRPC.Client
 
                 await foreach (var response in call.ResponseStream.ReadAllAsync())
                 {
-                    Console.WriteLine("Individual item from bi-Directional call: " + response.Message);
+                    System.Console.WriteLine("Individual item from bi-Directional call: " + response.Message);
                 }
             }
             
-            Console.WriteLine("Sending unary call...");
+            System.Console.WriteLine("Sending unary call...");
 
             var bye = await client.SayGoodByeAsync(new HelloRequest
             {
                 Name = "Liam Coffey"
             });
             
-            Console.WriteLine("Unary response:" + bye.Message);
+            System.Console.WriteLine("Unary response:" + bye.Message);
             
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            System.Console.WriteLine("Press any key to exit...");
+            System.Console.ReadKey();
         }
     }
 }
