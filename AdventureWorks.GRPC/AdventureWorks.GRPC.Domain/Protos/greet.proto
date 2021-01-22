@@ -17,6 +17,9 @@ service Greeter {
   
   // Bi-directional streaming
   rpc SayHelloToEveryRequest (stream HelloRequest) returns (stream HelloReply);
+  
+  //new test method
+  rpc SayGoodBye (HelloRequest) returns (HelloReply);
 }
 
 // The request message containing the user's name.

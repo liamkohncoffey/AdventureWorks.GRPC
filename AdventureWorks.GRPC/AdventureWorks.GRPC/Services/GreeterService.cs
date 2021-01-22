@@ -7,7 +7,6 @@ namespace AdventureWorks.GRPC.Services
     public class GreeterService : Greeter.GreeterBase
     {
         private readonly ILogger<GreeterService> _logger;
-
         public GreeterService(ILogger<GreeterService> logger)
         {
             _logger = logger;
@@ -57,6 +56,14 @@ namespace AdventureWorks.GRPC.Services
                     Message = $"Hello {request.Name}"
                 });
             }
+        }
+
+        public override Task<HelloReply> SayGoodBye(HelloRequest request, ServerCallContext context)
+        {
+            return Task.FromResult(new HelloReply
+            {
+                Message = "Bye " + request.Name
+            });
         }
     }
 }

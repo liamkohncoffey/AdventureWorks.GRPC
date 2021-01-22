@@ -76,6 +76,15 @@ namespace AdventureWorks.GRPC.Client
                 }
             }
             
+            Console.WriteLine("Sending unary call...");
+
+            var bye = await client.SayGoodByeAsync(new HelloRequest
+            {
+                Name = "Liam Coffey"
+            });
+            
+            Console.WriteLine("Unary response:" + bye.Message);
+            
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
