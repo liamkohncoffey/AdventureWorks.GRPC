@@ -37,7 +37,7 @@ namespace AdventureWorks.API
             
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "AdventureWorks.API", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "ShipWrecks.API", Version = "v1"});
             });
         }
 
@@ -48,7 +48,7 @@ namespace AdventureWorks.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AdventureWorks.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShipWrecks.API v1"));
             }
 
             //app.UseHttpsRedirection();

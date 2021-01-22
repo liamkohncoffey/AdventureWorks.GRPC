@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.GRPC", "AdventureWorks.GRPC\AdventureWorks.GRPC.csproj", "{5E4489C3-D451-4AEA-9633-2D6D3D81B2D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipWrecks.GRPC", "ShipWrecks.GRPC\ShipWrecks.GRPC.csproj", "{5E4489C3-D451-4AEA-9633-2D6D3D81B2D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.GRPC.Client.Console", "AdventureWorks.GRPC.Client.Console\AdventureWorks.GRPC.Client.Console.csproj", "{418CD954-8CEE-4D4D-BD7F-9CE434311E9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipWrecks.GRPC.Client.Console", "ShipWrecks.GRPC.Client.Console\ShipWrecks.GRPC.Client.Console.csproj", "{418CD954-8CEE-4D4D-BD7F-9CE434311E9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.GRPC.Domain", "AdventureWorks.GRPC.Domain\AdventureWorks.GRPC.Domain.csproj", "{8B4C5935-8925-4468-8CE0-4B5B45B049A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipWrecks.GRPC.Domain", "ShipWrecks.GRPC.Domain\ShipWrecks.GRPC.Domain.csproj", "{8B4C5935-8925-4468-8CE0-4B5B45B049A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.API", "AdventureWorks.API\AdventureWorks.API.csproj", "{DE19B0D1-FB38-4237-89F0-1A78B13A585B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipWrecks.API", "ShipWrecks.API\ShipWrecks.API.csproj", "{DE19B0D1-FB38-4237-89F0-1A78B13A585B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

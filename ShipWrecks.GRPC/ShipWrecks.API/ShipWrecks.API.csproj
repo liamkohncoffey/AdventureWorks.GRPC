@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>AdventureWorks.API</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -10,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AdventureWorks.GRPC.Domain\AdventureWorks.GRPC.Domain.csproj" />
+      <ProjectReference Include="..\ShipWrecks.GRPC.Domain\ShipWrecks.GRPC.Domain.csproj" />
     </ItemGroup>
 
 </Project>

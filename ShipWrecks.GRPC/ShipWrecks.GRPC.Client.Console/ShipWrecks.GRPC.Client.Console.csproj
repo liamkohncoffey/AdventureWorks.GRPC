@@ -3,7 +3,6 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <AssemblyName>AdventureWorks.GRPC.Client.Console</AssemblyName>
         <RootNamespace>AdventureWorks.GRPC.Client</RootNamespace>
     </PropertyGroup>
 
@@ -14,8 +13,22 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
-        <ProjectReference Include="..\AdventureWorks.GRPC.Domain\AdventureWorks.GRPC.Domain.csproj" />
-        <Protobuf Include="..\AdventureWorks.GRPC.Domain\Protos\greet.proto" GrpcServices="Client" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ShipWrecks.GRPC.Domain\ShipWrecks.GRPC.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Protobuf Include="..\ShipWrecks.GRPC.Domain\Protos\greet.proto">
+        <GrpcServices>Client</GrpcServices>
+        <Access>Public</Access>
+        <ProtoCompile>True</ProtoCompile>
+        <CompileOutputs>True</CompileOutputs>
+        <OutputDir>obj\Debug\netcoreapp3.1\</OutputDir>
+        <Generator>MSBuild:Compile</Generator>
+        <Link>Protos\greet.proto</Link>
+      </Protobuf>
     </ItemGroup>
     
 </Project>
