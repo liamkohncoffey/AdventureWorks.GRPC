@@ -14,6 +14,7 @@
     
     <ItemGroup>
       <ProjectReference Include="..\ShipWrecks.GRPC.Domain\ShipWrecks.GRPC.Domain.csproj" />
+      <ProjectReference Include="..\ShipWrecks.Infrastructure.Persistence\ShipWrecks.Infrastructure.Persistence.csproj" />
     </ItemGroup>
     
     <ItemGroup>

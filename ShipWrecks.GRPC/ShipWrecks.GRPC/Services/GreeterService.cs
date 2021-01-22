@@ -1,23 +1,24 @@
 using System.Threading.Tasks;
 using Grpc.Core;
-using Microsoft.Extensions.Logging;
+using ShipWrecks.GRPC.Domain.Repositories;
 
 namespace ShipWrecks.GRPC.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {
-        private readonly ILogger<GreeterService> _logger;
-        public GreeterService(ILogger<GreeterService> logger)
+        private readonly IShipWreckQueryBuilder _shipWreckQueryBuilder;
+        public GreeterService(IShipWreckQueryBuilder shipWreckQueryBuilder)
         {
-            _logger = logger;
+            _shipWreckQueryBuilder = shipWreckQueryBuilder;
         }
 
-        public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+        public override async Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
-            return Task.FromResult(new HelloReply
+            var test = await _shipWreckQueryBuilder.Where(c => true).Take(1).ToEntities();
+            return new HelloReply
             {
                 Message = "Hello " + request.Name
-            });
+            };
         }
 
         public override async Task SayManyHellos(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
