@@ -1,5 +1,5 @@
-﻿using AdventureWorks.GRPC;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using ShipWrecks.GRPC;
 
 namespace ShipWrecks.API.Controllers
 {

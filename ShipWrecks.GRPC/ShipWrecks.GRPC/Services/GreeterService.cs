@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using AdventureWorks.GRPC;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
 

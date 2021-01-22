@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AdventureWorks.GRPC;
 using Grpc.Core;
 using Grpc.Net.Client;
 

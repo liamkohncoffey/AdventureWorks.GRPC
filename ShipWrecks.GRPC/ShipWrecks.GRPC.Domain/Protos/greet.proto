@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "AdventureWorks.GRPC";
+option csharp_namespace = "ShipWrecks.GRPC";
 
 package greet;
 
